@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chat</title>
+</head>
+
+<body>
+
+    <div>
+        <div style="width: 30%;" id="chat"></div>
+        <br />
+        <form method="">
+            <input type="text" id="pesan" name="pesan" style="width: 30%;">
+            <button type="submit" onclick="return send()">Send</button>
+        </form>
+        <script type="text/javascript">
+            function send() {
+                let pesan = document.getElementById("pesan").value;
+                document.getElementById("chat").innerHTML += pesan + "<br/>";
+                document.getElementById("pesan").value = "";
+                return false
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="margin: 200px;">
+
+    <form method="REQUEST">
+        Username : <input type="text" placeholder="username" id="username" name="username"><br /><br />
+        Password : <input type="password" placeholder="password" id="password" name="password"><br /><br />
+        <button type="submit" onclick="return login()">SUBMIT</button>
+    </form>
+
+    <script type="text/javascript">
+        function login() {
+            username = document.getElementById("username").value;
+            password = document.getElementById("password").value;
+
+            if (username == "" || password == "") {
+                alert("Username / Password Tidak Boleh Kosong");
+                return false;
+            } else if (username == "windy" && password == "1234567") {
+                window.location = "index.html";
+                return false;
+            }
+            else if (password.length < 6) {
+                alert("Password Kurang dari 6");
+                return false;
+            } else {
+                alert("Username / Password anda salah");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
